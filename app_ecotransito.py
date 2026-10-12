@@ -43,7 +43,6 @@ st.set_page_config(page_title="Sistema EcoTránsito CDMX", layout="wide")
 # --------------------------------------------------------------------------
 # Carga el CSV limpio una sola vez mediante cache para no volver a leerlo en
 # cada interaccion y mantener la app rapida.
-@st.cache_data
 def cargar_datos() -> pd.DataFrame:
     """Lee el CSV limpio una sola vez (cache) para que la app sea rapida."""
     return pd.read_csv(CSV_LIMPIO)
